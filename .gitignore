@@ -1,5 +1,12 @@
+# Docker / Postgres volume
+dezc_1w_docker_workshop/pipeline/ny_taxi_postgres_data/
+
+# uv
+.venv/
+
 # ignore all parquet files
 *.parquet
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
