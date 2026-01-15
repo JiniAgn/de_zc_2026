@@ -31,14 +31,14 @@ parse_dates = [
 def run():
     pg_user = 'root'
     pg_pass = 'root'
-    pg_host = 'locahost'
+    pg_host = 'localhost'
     pg_port = 5432
     pg_db = 'ny_taxi'
     
     year = 2021
     month = 1
 
-    target_table = 'yellow_taxi_data'  
+    target_table = 'yellow_taxi_data_pythonscript'  
 
     # read data from csv file 
     prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow'
@@ -61,14 +61,14 @@ def run():
     for df_chunk in tqdm(df_iter):
         if first:
             df_chunk.head(0).to_sql(
-                name='yellow_taxi_data',
+                name=target_table,
                 con=engine,
                 if_exists='replace'
             )
             first = False
 
         df_chunk.to_sql(
-            name='yellow_taxi_data', 
+            name=target_table, 
             con=engine, 
             if_exists = 'append'
         )
