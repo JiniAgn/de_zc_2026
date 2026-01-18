@@ -6,6 +6,8 @@ dezc_1w_docker_workshop/pipeline/ny_taxi_postgres_data/
 
 # ignore all parquet files
 *.parquet
+# ignore all csv files
+*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

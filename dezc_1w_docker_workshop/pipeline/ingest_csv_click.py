@@ -1,5 +1,5 @@
 """
-python ingest_csv_click.py \
+uv run python ingest_csv_click.py \
   --pg-user root \
   --pg-password xxxx \
   --pg-host localhost \
